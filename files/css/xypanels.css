@@ -1,0 +1,64 @@
+/*
+ * xyPanels v1.0
+ *
+ * Copyright 2015 Carlos Ruiz / carlosruiz.me
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Layout */
+.page-wrapper {
+	overflow: hidden;
+}
+.page-wrapper,
+.panel-row,
+.panel-wrapper,
+.panel-content {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.panel-wrapper.x-axis {
+	position: absolute;
+	top: 0;
+}
+
+/* Controls */
+.panel-controls {
+    cursor: pointer;
+}
+.panel-controls.up,
+.panel-controls.down,
+.panel-controls.left,
+.panel-controls.right {
+	background-color: #00ff00;
+    color: #fff;
+    position: fixed;
+    text-align: center;
+    width: 20%;
+	height: 20%;
+	display: none;
+}
+.panel-controls.up {
+	top: 0;
+	left: 40%;
+	right: 40%;
+}
+.panel-controls.down {
+	bottom: 0;
+	left: 40%;
+	right: 40%;
+}
+.panel-controls.left {
+	left: 0;
+	top: 40%;
+	bottom: 40%;
+}
+.panel-controls.right {
+	right: 0;
+	top: 40%;
+	bottom: 40%;
+}

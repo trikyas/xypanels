@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>xyPANELS DEMO</title>
+
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<!-- Bootstrap for demo -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- xyPanels -->
+<script src="js/xypanels.js"></script><!-- SEE HOW THIS WORKS SANS JS -->
+<link href="css/xypanels.css" type="text/css" rel="stylesheet" />
+<script>
+$(document).ready(function() {
+	panels();
+});
+</script>
+
+<!-- Demo -->
+<link href="css/demo.css" type="text/css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<div class="page-wrapper">
+  <section class="panel-wrapper y-axis" id="introduction">
+    <article class="panel-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <h1><img src="images/grid.png" alt="xyPanels" class="img-responsive" /><h1>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <h1>xyPanels</h1>
+                <p>xyPanels is a tool for front end web developers and a twist on popular <a href="https://onepagelove.com/" target="_blank">one-page website designs</a>. Most of the heavy lifting is done by jQuery but I am planning to replace certain functions with modern CSS (such as the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox</a> layout module) in future releases. xyPanels also operates "outside" the layout and can be used with "inside" front end frameworks such as <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>.</p>
+                <ul>
+                  <li>See how full-window panels are <a class="panel-controls targeting" data-target="implementation">set up along the X and Y axes</a> of the page.</li>
+                  <li>In addition to built-in scrolling you can also include links that will <a class="panel-controls targeting" data-target="navigational-controls">target specific panels</a>.</li>
+                  <li>Please feel free to <a class="panel-controls targeting" data-target="contact">contact me</a> or <a href="https://github.com/vcdcarlos/xy-panels" target="_blank">download xyPanels on GitHub</a>.</li>
+                </ul>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- BEGIN ROW -->
+  <section class="panel-wrapper y-axis panel-row">
+    <section id="purple-a" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container white-bg">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1>Explore Purple Hues</h1>
+              <span class="swatches">
+                <a class="swatch b panel-controls targeting" data-target="purple-b"></a>
+                <a class="swatch c panel-controls targeting" data-target="purple-c"></a>
+                <a class="swatch d panel-controls targeting" data-target="purple-d"></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="purple-b" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <span class="color-details"><a class="panel-controls targeting" data-target="purple-a">&larr; Purple Hues</a></span>
+              <h2>Mardi Gras</h2>
+              <span class="color-details">#525167</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="purple-c" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <span class="color-details"><a class="panel-controls targeting" data-target="purple-a">&larr; Purple Hues</a></span>
+              <h2>Magic Wand</h2>
+              <span class="color-details">#ada0d2</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="purple-d" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <span class="color-details"><a class="panel-controls targeting" data-target="purple-a">&larr; Purple Hues</a></span>
+              <h2>Sugar Beet</h2>
+              <span class="color-details">#834253</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </section>
+  <!-- END ROW -->
+  <section class="panel-wrapper y-axis" id="implementation">
+    <article class="panel-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Implementation</h2>
+            <div class="row">
+              <div class="col-xs-12">
+                <h5>The following would go in the &lt;head&gt;</h5>
+                <p><pre>&lt;script src="//code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;<br />&lt;script src="js/xypanels.js"&gt;&lt;/script&gt;<br />&lt;link href="css/xypanels.css" type="text/css" rel="stylesheet" /&gt;<br />&lt;script&gt;$(document).ready(function() { panels(); });&lt;/script&gt;</pre></p>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <h5>3 vertical (y-axis) panels inside of the page wrapper &lt;div&gt;</h5>
+                <p><pre>&lt;div class="page-wrapper"&gt;<br /><span class="indent-1">&lt;section class="panel-wrapper y-axis" id="unique-id-a"&gt;</span><br /><span class="indent-2">&lt;article class="panel-content"&gt;</span><br /><span class="indent-3">...<br /><span class="indent-2">&lt;/article&gt;</span><br /><span class="indent-1">&lt;/section&gt;</span><br /><span class="indent-1">&lt;section class="panel-wrapper y-axis" id="unique-id-b"&gt;</span><br /><span class="indent-2">&lt;article class="panel-content"&gt;</span><br /><span class="indent-3">...<br /><span class="indent-2">&lt;/article&gt;</span><br /><span class="indent-1">&lt;/section&gt;</span><br /><span class="indent-1">&lt;section class="panel-wrapper y-axis" id="unique-id-c"&gt;</span><br /><span class="indent-2">&lt;article class="panel-content"&gt;</span><br /><span class="indent-3">...<br /><span class="indent-2">&lt;/article&gt;</span><br /><span class="indent-1">&lt;/section&gt;</span><br />&lt;/div&gt;</pre></p>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <h5>Add a horizontal row of (x-axis) panels inside of a vertical panel</h5>
+                <p><pre>&lt;section class="panel-wrapper y-axis panel-row" id="unique-id-b"&gt;<br /><span class="indent-1">&lt;section class="panel-wrapper x-axis" id="unique-id-b1"&gt;</span><br /><span class="indent-2">&lt;article class="panel-content"&gt;</span><br /><span class="indent-3">...<br /><span class="indent-2">&lt;/article&gt;</span><br /><span class="indent-1">&lt;/section&gt;</span><br /><span class="indent-1">&lt;section class="panel-wrapper x-axis" id="unique-id-b2"&gt;</span><br /><span class="indent-2">&lt;article class="panel-content"&gt;</span><br /><span class="indent-3">...<br /><span class="indent-2">&lt;/article&gt;</span><br /><span class="indent-1">&lt;/section&gt;</span><br /><span class="indent-1">&lt;section class="panel-wrapper x-axis" id="unique-id-b3"&gt;</span><br /><span class="indent-2">&lt;article class="panel-content"&gt;</span><br /><span class="indent-3">...<br /><span class="indent-2">&lt;/article&gt;</span><br /><span class="indent-1">&lt;/section&gt;</span><br />&lt;/section&gt;</pre></p>
+                <h5>Make sure to add the "panel-row" class to the parent panel</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- BEGIN ROW -->
+  <section class="panel-wrapper y-axis panel-row">
+    <section id="green-a" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container white-bg">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1>Explore Green Hues</h1>
+              <span class="swatches">
+                <a class="swatch b panel-controls targeting" data-target="green-b"></a>
+                <a class="swatch c panel-controls targeting" data-target="green-c"></a>
+                <a class="swatch d panel-controls targeting" data-target="green-d"></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="green-b" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <span class="color-details"><a class="panel-controls targeting" data-target="green-a">&larr; Green Hues</a></span>
+              <h2>Rockwall Vine</h2>
+              <span class="color-details">#6e7e42</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="green-c" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <span class="color-details"><a class="panel-controls targeting" data-target="green-a">&larr; Green Hues</a></span>
+              <h2>Four Leaf Clover</h2>
+              <span class="color-details">#bad09f</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="green-d" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <span class="color-details"><a class="panel-controls targeting" data-target="green-a">&larr; Green Hues</a></span>
+              <h2>Lazy Lizard</h2>
+              <span class="color-details">#91a93e</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </section>
+  <!-- END ROW -->
+  <section class="panel-wrapper y-axis about" id="navigational-controls">
+    <article class="panel-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Navigational Controls</h2>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <h5>Put this before the &lt;/body&gt; for scrolling controls</h5>
+                <p><pre>&lt;a class="panel-controls up"&gt;&lt;/a&gt;<br />&lt;a class="panel-controls down"&gt;&lt;/a&gt;<br />&lt;a class="panel-controls left"&gt;&lt;/a&gt;<br />&lt;a class="panel-controls right"&gt;&lt;/a&gt;</pre></p>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <h5>You can also target specific panels <a class="panel-controls targeting" data-target="purple-d">anywhere on the page</a></h5>
+                <p><pre>&lt;a class="panel-controls targeting" data-target="unique-id-c"&gt;<br /><span class="indent-1">Take me to panel C</span><br />&lt;/a&gt;</pre></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- BEGIN ROW -->
+  <section class="panel-wrapper y-axis panel-row">
+    <section id="earth-tones-a" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container white-bg">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1>Explore Earthy Hues</h1>
+              <span class="swatches">
+                <a class="swatch b panel-controls targeting" data-target="earth-tones-b"></a>
+                <a class="swatch c panel-controls targeting" data-target="earth-tones-c"></a>
+                <a class="swatch d panel-controls targeting" data-target="earth-tones-d"></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="earth-tones-b" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <span class="color-details"><a class="panel-controls targeting" data-target="earth-tones-a">&larr; Earthy Hues</a></span>
+              <h2>True Copper</h2>
+              <span class="color-details">#8b5644</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="earth-tones-c" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <span class="color-details"><a class="panel-controls targeting" data-target="earth-tones-a">&larr; Earthy Hues</a></span>
+              <h2>Natural Bark</h2>
+              <span class="color-details">#6d574e</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="earth-tones-d" class="panel-wrapper x-axis behr">
+      <article class="panel-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <span class="color-details"><a class="panel-controls targeting" data-target="earth-tones-a">&larr; Earthy Hues</a></span>
+              <h2>Golden Pumpkin</h2>
+              <span class="color-details">#ca874c</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </section>
+  <!-- END ROW -->
+  <section class="panel-wrapper y-axis about" id="contact">
+    <article class="panel-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <center>
+                  <h4>Carlos Ruiz</h4>
+                  <a href="http://www.linkedin.com/profile/view?id=17882685" title="LinkedIn" target="_blank"><i class="fa fa-4x fa-linkedin-square"></i></a>
+                  <a href="https://www.facebook.com/carlosnashville" title="Facebook" target="_blank"><i class="fa fa-4x fa-facebook"></i></a>
+                  <a href="https://github.com/vcdcarlos" title="GitHub" target="_blank"><i class="fa fa-4x fa-github-alt"></i></a>
+                  <a href="mailto:carlos.ruiz@vanderbilt.edu" title="Email"><i class="fa fa-4x fa-paper-plane"></i>
+</a>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</div>
+<a class="panel-controls up"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
+<a class="panel-controls down"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+<a class="panel-controls left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+<a class="panel-controls right"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+</body>
+</html>

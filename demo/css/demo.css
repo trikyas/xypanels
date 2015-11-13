@@ -1,0 +1,203 @@
+/* Basics */
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+h1 {
+	line-height: 40px;
+	margin: 20px 0;
+}
+a {
+	color: #725ea8;
+}
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+/* Layout */
+.page-wrapper {
+    font-size: 120%;
+}
+#contact a {
+	margin: 10px 20px;
+}
+
+/* Panel backgrounds */
+.panel-wrapper {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	background-image: url("../images/paper-texture-background.jpg");
+}
+#purple-a {
+	background-image: url("../images/purple-introduction.jpg");
+}
+#purple-b, #purple-a .b {
+	background-color: #525167;
+	background-image: none;
+}
+#purple-c, #purple-a .c {
+	background-color: #ada0d2;
+	background-image: none;
+}
+#purple-d, #purple-a .d {
+	background-color: #834253;
+	background-image: none;
+}
+#green-a {
+	background-image: url("../images/green-introduction.jpg");
+}
+#green-b, #green-a .b {
+	background-color: #6e7e42;
+	background-image: none;
+}
+#green-c, #green-a .c {
+	background-color: #bad09f;
+	background-image: none;
+}
+#green-d, #green-a .d {
+	background-color: #91a93e;
+	background-image: none;
+}
+#earth-tones-a {
+	background-image: url("../images/earth-tones-introduction.jpg");
+}
+#earth-tones-b, #earth-tones-a .b {
+	background-color: #8b5644;
+	background-image: none;
+}
+#earth-tones-c, #earth-tones-a .c {
+	background-color: #6d574e;
+	background-image: none;
+}
+#earth-tones-d, #earth-tones-a .d {
+	background-color: #ca874c;
+	background-image: none;
+}
+	
+/* White background for containers */
+article > .container.white-bg {
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.90);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+article > .container.white-bg > .row > div {
+	color: #000;
+}
+
+/* BEHR demo containers */
+.behr {
+	color: #fff;
+}
+.behr a,
+.behr a:hover,
+.behr a:focus {
+	color: #fff;
+}
+.behr h1 {
+	width: auto;
+	float: left;
+}
+.behr h2 {
+	font-size: 280%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+/* Controls */
+.panel-controls.up,
+.panel-controls.down,
+.panel-controls.left,
+.panel-controls.right {
+	background: #fff;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.65);
+	color: rgb(85, 85, 85);
+	color: rgba(85, 85, 85, 0.90);
+	width: auto;
+	height: auto;
+}
+.panel-controls.up:hover,
+.panel-controls.down:hover,
+.panel-controls.left:hover,
+.panel-controls.right:hover,
+.panel-controls.up:focus,
+.panel-controls.down:focus,
+.panel-controls.left:focus,
+.panel-controls.right:focus {
+	color: rgb(34, 34, 34);
+	color: rgba(34, 34, 34, 1.0);
+}
+.panel-controls.up {
+	border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	-webkit-border-radius: 0 0 4px 4px;
+}
+.panel-controls.down {
+	border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+}
+.panel-controls.left {
+	border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	-webkit-border-radius: 0 4px 4px 0;
+}
+.panel-controls.right {
+	border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	-webkit-border-radius: 4px 0 0 4px;
+}
+.panel-controls span {
+	font-size: 5vh;
+    margin: 0;
+    padding: 0;
+	top: 0;
+}
+.panel-controls.left,
+.panel-controls.right {
+	height: 20vh;
+}
+.panel-controls.up,
+.panel-controls.down {
+	height: 5vh;
+}
+.panel-controls.left span,
+.panel-controls.right span {
+	line-height: 20vh;
+}
+.panel-controls.up span,
+.panel-controls.down span {
+	line-height: 5vh;
+}
+.swatches {
+	width: auto;
+	float: right;
+}
+.swatches .panel-controls.swatch {
+	cursor: pointer;
+    display: inline;
+    float: left;
+    height: 40px;
+    margin: 20px 0 20px 10px;
+    width: 40px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+}
+
+/* Code examples */
+pre .indent-1 {
+	margin-left: 10px;
+}
+pre .indent-2 {
+	margin-left: 20px;
+}
+pre .indent-3 {
+	margin-left: 30px;
+}
