@@ -1,6 +1,7 @@
 /* Basics */
 body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #6d574e;
 }
 h1 {
 	line-height: 40px;
@@ -86,6 +87,9 @@ article > .container.white-bg {
 }
 article > .container.white-bg > .row > div {
 	color: #000;
+}
+article > .container.white-bg > .row > div h1 {
+	color: #8b5644;
 }
 
 /* BEHR demo containers */
@@ -189,6 +193,14 @@ article > .container.white-bg > .row > div {
 	border-radius: 20px;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
+}
+
+/* Credits */
+.credits {
+	border-top: 1px solid #6d574e;
+	margin: 20px 0 10px 0;
+	padding: 10px 0;
+	color: #8b5644;
 }
 
 /* Code examples */
